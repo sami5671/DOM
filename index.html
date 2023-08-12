@@ -40,7 +40,9 @@ into a object model if javascript is added -->
       </section>
 
       <section class="fruits-container">
-        <h1 id="Fruits-title">Fruits I like</h1>
+        <h1 id="Fruits-title" class="random-class background color">
+          Fruits I like
+        </h1>
         <ul>
           <li>Apple</li>
           <li>Banana</li>
@@ -70,6 +72,7 @@ into a object model if javascript is added -->
       };
       // console.log("Adding the scripted file on the html");
 
+      // option 1: getElementByTagName
       const liCollection = document.getElementsByTagName("li");
       // console.log(liCollection);
       for (const li of liCollection) {
@@ -81,20 +84,27 @@ into a object model if javascript is added -->
         // console.log(h1.innerText);
       }
 
+      // option 2: getElementById
       const FruitsTitle = document.getElementById("Fruits-title");
       FruitsTitle.innerText = "Fruits changed by JS";
 
+      // option 3: getElementByClassName
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
         // console.log(place.innerText);
       }
 
-      // querySelectorAll
+      // option 4: querySelector
+
+      // option 5: querySelectorAll
       const someLi = document.querySelectorAll(".fruits-container");
       // console.log(someLi);
       for (const li of someLi) {
         console.log(li.innerText);
       }
+
+      // -------------
+      document.getElementById("Fruits-title").style.color = "purple";
     </script>
   </body>
 </html>
