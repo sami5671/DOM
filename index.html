@@ -5,6 +5,7 @@ into a object model if javascript is added -->
      any HTML or XML-based markup language document. The DOM is a document model 
      loaded in the browser and representing the document as a node tree, or DOM tree, 
      where each node represents part of the document (e.g. an element, text string, or comment). -->
+
 <!-- In Web development, an API is generally a set of code features (e.g. methods, properties, events, and URLs) that a developer can use in their apps for interacting with components of a user's web browser,
      other software/hardware on the user's computer, or third-party websites and services. -->
 <!DOCTYPE html>
@@ -15,23 +16,85 @@ into a object model if javascript is added -->
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
+  <style>
+    #Fruits-title {
+      color: black;
+    }
+    .important-places {
+      color: aqua;
+    }
+  </style>
   <body>
     <header>
       <h1>Wlcome to my DOM</h1>
     </header>
     <main>
-      <h1>My Awesome Dom De baba</h1>
-      <ul>
-        <li>Jalali set</li>
-        <li>Safayat</li>
-        <li>Bonobash</li>
-        <li>Nindabash</li>
-      </ul>
+      <section>
+        <h1>My Awesome Dom De baba</h1>
+        <ul>
+          <li>Jalali set</li>
+          <li>Safayat</li>
+          <li>Bonobash</li>
+          <li>Nindabash</li>
+        </ul>
+      </section>
+
+      <section class="fruits-container">
+        <h1 id="Fruits-title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Carrot</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1 id="places-item">Places I like to Visit</h1>
+        <ul>
+          <li class="important-places">kataban</li>
+          <li class="important-places">bandarban</li>
+          <li class="important-places">shalban</li>
+          <li>Sundarban</li>
+        </ul>
+      </section>
     </main>
 
     <script src="js/dom.js"></script>
     <script>
-      console.log("Adding the scripted file on the html");
+      const student = {
+        name: "ABUL",
+        ID: 11,
+        study: function (time) {
+          // console.log(time, "study kortese");
+        },
+      };
+      // console.log("Adding the scripted file on the html");
+
+      const liCollection = document.getElementsByTagName("li");
+      // console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li);
+      }
+
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const h1 of allHeadings) {
+        // console.log(h1.innerText);
+      }
+
+      const FruitsTitle = document.getElementById("Fruits-title");
+      FruitsTitle.innerText = "Fruits changed by JS";
+
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        // console.log(place.innerText);
+      }
+
+      // querySelectorAll
+      const someLi = document.querySelectorAll(".fruits-container");
+      // console.log(someLi);
+      for (const li of someLi) {
+        console.log(li.innerText);
+      }
     </script>
   </body>
 </html>
