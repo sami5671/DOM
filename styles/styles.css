@@ -2,3 +2,13 @@ h1,
 li {
   color: coral;
 }
+.yellow-bg {
+  background-color: yellowgreen !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.large-text {
+  font-size: 2em;
+}

@@ -8,6 +8,11 @@ into a object model if javascript is added -->
 
 <!-- In Web development, an API is generally a set of code features (e.g. methods, properties, events, and URLs) that a developer can use in their apps for interacting with components of a user's web browser,
      other software/hardware on the user's computer, or third-party websites and services. -->
+
+<!-- Every node in the DOM represents and HTML element. What three relationships between 
+  nodes are key to the DOM hierarchy? The three relationships between nodes in 
+  the DOM are: parent, child, and sibling. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +33,7 @@ into a object model if javascript is added -->
     <header>
       <h1>Wlcome to my DOM</h1>
     </header>
-    <main>
+    <main id="main-container">
       <section>
         <h1>My Awesome Dom De baba</h1>
         <ul>
@@ -50,9 +55,9 @@ into a object model if javascript is added -->
         </ul>
       </section>
 
-      <section>
+      <section id="places-container" class="large-text">
         <h1 id="places-item">Places I like to Visit</h1>
-        <ul>
+        <ul id="places-list">
           <li class="important-places">kataban</li>
           <li class="important-places">bandarban</li>
           <li class="important-places">shalban</li>
@@ -62,6 +67,8 @@ into a object model if javascript is added -->
     </main>
 
     <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/dom_style.js"></script>
     <script>
       const student = {
         name: "ABUL",
