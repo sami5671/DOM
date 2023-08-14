@@ -10,3 +10,6 @@ const secondSection = document.getElementById("second-section");
 console.log(secondSection);
 secondSection.style.color = "white";
 secondSection.style.backgroundColor = "tomato";
+
+// document.querySelectorAll----will get all
+// document.querySelector----will get first element
