@@ -1,7 +1,5 @@
 // option 1: directly set on the HTML element
-{
-  /* <button onclick="console.log(65)">Another button</button>; */
-}
+/* <button onclick="console.log(65)">Another button</button>; */
 
 // option 2: add onclick function on the HTML element
 //  <button onclick="makeRed()">Red</button>
@@ -37,7 +35,7 @@ makeGreenButton.addEventListener("click", function makeGreen() {
   document.body.style.backgroundColor = "green";
 });
 
-// option: 4 final
+// option: 4 final important
 // document
 //   .getElementById("make-goldenrod")
 //   .addEventListener("click", function () {
