@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- add css  -->
+    <style>
+      #item-2 {
+        border: 2px solid rebeccapurple;
+      }
+      ul {
+        border: 2px solid tomato;
+      }
+      section {
+        border: 2px solid blue;
+      }
+      body {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1>Exploring event BUbble</h1>
+    <section id="list-container">
+      <ul id="list-ul">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Necessitatibus, qui.</li>
+        <li id="item-3">Ab, sit.</li>
+        <li id="item-4">Sequi, veritatis?</li>
+        <li id="item-5">Fugit, obcaecati?</li>
+        <li id="item-6">Rem, blanditiis.</li>
+      </ul>
+    </section>
+
+    <!-- Event bubble and Stop propagating -->
+    <script>
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("item-2 clicked");
+        // event.stopImmediatePropagation();--->stop all without it
+        // event.stopPropagation();
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("item-3 clicked");
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("item-4 clicked");
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("item-4 clicked");
+      });
+
+      document.getElementById("list-ul").addEventListener("click", function () {
+        console.log("ul clicked");
+      });
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function () {
+          console.log("section container clicked");
+        });
+      document.getElementById("body").addEventListener("click", function () {
+        console.log("body clicked");
+      });
+    </script>
+  </body>
+</html>
